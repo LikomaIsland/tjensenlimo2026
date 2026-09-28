@@ -141,13 +141,72 @@ header {
     align-items: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(90deg,rgba(8,9,12,.88) 0%,rgba(8,9,12,.60) 48%,rgba(8,9,12,.15) 100%), url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1800&q=82") center/cover
+    background: #111318
 }
 
+    .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(90deg,rgba(8,9,12,.88) 0%,rgba(8,9,12,.60) 48%,rgba(8,9,12,.15) 100%)
+    }
+
     .hero .container {
+        position: relative;
+        z-index: 2;
         color: #fff;
         padding: 90px 0
     }
+
+/* Hero image rotation (3 slides, 6s each, crossfade) */
+.hero-slides {
+    position: absolute;
+    inset: 0;
+    z-index: 0
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: heroFade 18s infinite
+}
+
+    .hero-slide:nth-child(1) {
+        background-image: url("../images/index1.jpg");
+        animation-delay: -1.5s
+    }
+
+    .hero-slide:nth-child(2) {
+        background-image: url("../images/index2.jpg");
+        animation-delay: 4.5s
+    }
+
+    .hero-slide:nth-child(3) {
+        background-image: url("../images/index3.jpg");
+        animation-delay: 10.5s
+    }
+
+@keyframes heroFade {
+    0% { opacity: 0 }
+    5% { opacity: 1 }
+    33% { opacity: 1 }
+    38% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-slide {
+        animation: none
+    }
+
+        .hero-slide:nth-child(1) {
+            opacity: 1
+        }
+}
 
 .eyebrow {
     font-size: .78rem;
