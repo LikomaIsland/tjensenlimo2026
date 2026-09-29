@@ -177,7 +177,7 @@ header {
 
     .hero-slide:nth-child(1) {
         background-image: url("../images/index1.jpg");
-        animation-delay: -1.5s
+        animation-delay: -1.5s;
     }
 
     .hero-slide:nth-child(2) {
