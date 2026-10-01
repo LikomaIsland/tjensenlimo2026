@@ -109,16 +109,21 @@ header {
     text-transform: uppercase
 }
 
-.navlinks {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    font-weight: 700;
-    font-size: .93rem
-}
+    .navlinks {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        font-weight: 700;
+        font-size: .93rem;
+    }
+
+    .navlinks a {
+        text-transform: uppercase !important;
+    }
+
 
     .navlinks a:hover, .navlinks a.active {
-        color: var(--gold-dark)
+        color: var(--gold-dark);
     }
 
 .nav-cta {
@@ -191,11 +196,25 @@ header {
     }
 
 @keyframes heroFade {
-    0% { opacity: 0 }
-    5% { opacity: 1 }
-    33% { opacity: 1 }
-    38% { opacity: 0 }
-    100% { opacity: 0 }
+    0% {
+        opacity: 0
+    }
+
+    5% {
+        opacity: 1
+    }
+
+    33% {
+        opacity: 1
+    }
+
+    38% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
