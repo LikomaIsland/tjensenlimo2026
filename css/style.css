@@ -850,3 +850,19 @@ footer h3 {
         right: 8px
     }
 }
+.promise-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.promise-column {
+    padding: 20px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .promise-grid {
+        grid-template-columns: 1fr;
+    }
+}
