@@ -853,7 +853,7 @@ footer h3 {
 .promise-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 20px;
 }
 
 .promise-column {
@@ -865,4 +865,48 @@ footer h3 {
     .promise-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.service-card {
+    overflow: hidden;
+    padding: 0 0 28px;
+}
+
+.service-image {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+
+    .service-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform .4s ease;
+    }
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-card .icon,
+.service-card h3,
+.service-card p,
+.service-card .kicker {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.service-card .icon {
+    margin-bottom: 12px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    margin-bottom: 20px;
 }
